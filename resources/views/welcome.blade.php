@@ -7,21 +7,13 @@
 
     <title>Laravel</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Nunito';
-        }
-    </style>
-
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/scripts.js"></script>
 </head>
 
 <body>
         <h1>Algum titulo</h1>
+        <img src="/img/banner.jpg" alt="Banner">
         @if(10 > 20)
             <p>A condição é true</p>
         @endif
