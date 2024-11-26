@@ -27,6 +27,7 @@ class EventController extends Controller
         $event->city = $request->city;
         $event->private = $request->private;
         $event->description = $request->description;
+        $event->items = json_encode($request->items);
 
         // Image Upload
         if($request->hasFile('image') && $request->file('image')->isValid()){
@@ -49,6 +50,8 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::findOrFail($id);
+
+        $event->items = json_decode($event->items);
 
         return view('events.show', ['event' => $event]);
     }
