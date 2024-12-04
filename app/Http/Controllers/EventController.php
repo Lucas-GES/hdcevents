@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EventController extends Controller
 {
@@ -53,6 +54,10 @@ class EventController extends Controller
 
             $event->image = $imageName;
         }
+
+        $user = Auth::user();
+
+        $event->user_id = $user->id;
 
         $event->save();
 
